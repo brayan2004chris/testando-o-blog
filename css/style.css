@@ -1,0 +1,466 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background: linear-gradient(rgb(48, 66, 160), rgb(252, 253, 204), rgb(48, 66, 160), rgb(252, 253, 204) ) ;
+  color: gold;
+align-items: center;
+text-align: center;
+width: 100%;
+min-height: 100vh;
+}
+
+.navegação {
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  color: white;
+  position: relative;
+  background-color: deepskyblue;
+}
+
+.nav-desktop a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  margin: 0px 10px;
+  font-size: 16px;
+}
+
+.nav-desktop a:hover {
+  color: #52ff86;
+}
+
+.pesquisa {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  width: 192px;
+  border: 1px solid #ccc;
+  border-radius: 16px;
+}
+
+.pesquisa input {
+  width: 100%;
+  padding: 4px;
+  border: none;
+  border-radius: 16px;
+}
+
+.pesquisa button {
+  background-color: #fe7171;
+  border: none;
+  border-radius: 16px;
+}
+
+.pesquisa button:hover {
+  background-color: #ff007b;
+}
+
+.menu-escondido,
+.menu {
+  display: none;
+}
+
+.linha {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: red;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: deepskyblue;
+  z-index: 1000;
+}
+
+.menu li {
+  text-align: center;
+}
+
+.menu li a {
+  color: #7affb4;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  padding: 16px;
+}
+
+.menu li a:hover {
+  color: #ffffff;
+}
+
+.menu-escondido:checked~.menu {
+  max-height: 500px;
+  padding: 8px 0;
+}
+
+.menu-escondido:checked~.hamburguer .linha1 {
+  transform: rotate(50deg) translate(8px, 8px);
+}
+
+.menu-escondido:checked~.hamburguer .linha2 {
+  opacity: 0;
+}
+
+.menu-escondido:checked~.hamburguer .linha4 {
+  transform: rotate(-50deg) translate(8px, -8px);
+}
+
+.login{
+  background-color: #fe8686;
+  border: #ffff7a solid 1px;
+  border-radius: 8px;
+  width: 30px;
+  height: 30px;
+}
+
+.login:hover{
+  background-color: #ff007b;
+  border: #ff0000 solid 1px;
+}
+
+/*.caixa {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin: 30px auto;
+  max-width: 1200px;
+  align-items: center;
+}*/
+
+.caixa {display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+        text-align: center;
+  margin: 10px;
+  max-width: 1000px;}
+
+
+.capa img {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s, border 0.3s;
+}
+
+.capa img:hover {
+  transform: scale(1.05);
+  border: 2px solid gold;
+}
+
+/*.capa{
+  display: grid;
+  grid: row;
+  justify-content: space-between;
+  align-items: center;
+margin: 10px;
+width: 100%;
+height: 100%; 
+}*/
+
+/*.capa img{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+        margin: 15px;
+        width: 335px;
+        height: 355px;
+       }
+
+.capa img:hover{transform: scale(1.1);
+                border: 2px solid #feec86;
+                border-radius: 10px;
+                margin: 10px;
+                padding: 0;
+                }*/
+
+a{
+  text-decoration: none;
+  color: black;
+  text-align: center;
+}
+
+a:hover{
+  color: #52ff86;
+}
+
+.capa a{
+  margin-top: 30px;
+}
+
+
+.politicas{
+  display: grid;
+  grid: row;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 25px;
+  color: black;
+  border: 1px solid orange;
+  margin-top: 40px;
+  padding: 0;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background: linear-gradient(rgb(48, 66, 160), rgb(252, 253, 204), rgb(48, 66, 160), rgb(252, 253, 204));
+  color: gold;
+  text-align: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.navegação {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  background-color: deepskyblue;
+  flex-wrap: wrap;
+}
+
+.nav-desktop a {
+  color: #000;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.nav-desktop a:hover {
+  color: #52ff86;
+}
+
+
+.pesquisa {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.pesquisa input {
+  width: 100%;
+  padding: 6px;
+  border: none;
+  outline: none;
+}
+
+.pesquisa button {
+  background-color: #fe7171;
+  border: none;
+  padding: 6px;
+  border-radius: 0 16px 16px 0;
+  cursor: pointer;
+}
+
+.pesquisa button:hover {
+  background-color: #ff007b;
+}
+
+.login {
+  background-color: #fe8686;
+  border: 1px solid #ffff7a;
+  border-radius: 8px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.login:hover {
+  background-color: #ff007b;
+  border: 1px solid #ff0000;
+}
+
+.menu-escondido,
+.menu {
+  display: none;
+}
+
+.hamburguer {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.linha {
+  width: 100%;
+  height: 4px;
+  background-color: red;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu {
+  list-style: none;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: deepskyblue;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease;
+}
+
+.menu li a {
+  display: block;
+  padding: 16px;
+  color: #7affb4;
+  text-decoration: none;
+}
+
+.menu li a:hover {
+  background-color: #0099cc;
+  color: white;
+}
+
+.menu-escondido:checked ~ .menu {
+  display: block;
+  max-height: 300px;
+}
+
+h1 {
+  margin-top: 30px;
+  font-size: 28px;
+}
+
+.caixa {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin: 20px auto;
+  max-width: 1200px;
+}
+
+.capa {
+  text-align: center;
+  flex: 1 1 220px;
+}
+
+.capa img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s, border 0.3s;
+}
+
+.capa img:hover {
+  transform: scale(1.05);
+  border: 2px solid #feec86;
+}
+
+.capa a {
+  display: block;
+  margin-top: 10px;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.capa a:hover {
+  color: #52ff86;
+}
+
+.politicas {
+  margin: 40px auto 10px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid orange;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.politicas a {
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+
+@media (max-width: 992px) {
+  .nav-desktop {
+    display: none;
+  }
+
+  .hamburguer {
+    display: flex;
+  }
+
+  .pesquisa {
+    width: 150px;
+  }
+
+  .caixa {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .capa img {
+    max-width: 80%;
+  }
+
+  .politicas {
+    font-size: 18px;
+    width: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  .pesquisa {
+    width: 120px;
+  }
+
+  .login {
+    width: 28px;
+    height: 28px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .capa img {
+    max-width: 90%;
+  }
+
+  .politicas {
+    font-size: 16px;
+  }
+}

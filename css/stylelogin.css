@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background: linear-gradient(rgb(48, 66, 160), rgb(252, 253, 204), rgb(48, 66, 160));
+  color: gold;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.navegação {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  background-color: deepskyblue;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.nav-desktop a {
+  color: #000;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 16px;
+}
+
+.nav-desktop a:hover {
+  color: #52ff86;
+}
+
+.pesquisa {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  width: 200px;
+}
+
+.pesquisa input {
+  flex: 1;
+  border: none;
+  padding: 6px;
+  border-radius: 16px 0 0 16px;
+}
+
+.pesquisa button {
+  background-color: #fe7171;
+  border: none;
+  border-radius: 0 16px 16px 0;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.pesquisa button:hover {
+  background-color: #ff007b;
+}
+
+.login {
+  background-color: #fe8686;
+  border: 1px solid #ffff7a;
+  border-radius: 8px;
+  width: 30px;
+  height: 30px;
+  margin-left: 4px;
+  cursor: pointer;
+}
+
+.login:hover {
+  background-color: #ff007b;
+  border: 1px solid #ff0000;
+}
+
+.menu-escondido {
+  display: none;
+}
+
+.hamburguer {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.linha {
+  height: 4px;
+  width: 100%;
+  background-color: red;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu {
+  display: none;
+  list-style: none;
+  background-color: deepskyblue;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.menu li a {
+  display: block;
+  padding: 16px;
+  color: #7affb4;
+  text-decoration: none;
+}
+
+.menu li a:hover {
+  background-color: #0099cc;
+  color: white;
+}
+
+.menu-escondido:checked ~ .menu {
+  display: block;
+}
+
+.menu-escondido:checked ~ .hamburguer .linha1 {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.menu-escondido:checked ~ .hamburguer .linha2 {
+  opacity: 0;
+}
+
+.menu-escondido:checked ~ .hamburguer .linha3 {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 340px;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  background: linear-gradient( rgb(255, 66, 66), rgb(255, 0, 102), rgb(255, 66, 66), rgb(255, 0, 123));
+  color: black;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.form {
+  margin-top: 1rem;
+}
+
+.input-group {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.input-group label {
+  display: block;
+  color: #222;
+  margin-bottom: 4px;
+}
+
+.input-group input {
+  width: 100%;
+  border-radius: 0.375rem;
+  border: 1px solid black;
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+
+.forgot {
+  text-align: right;
+  margin-top: 6px;
+}
+
+.forgot a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+.sign {
+  width: 100%;
+  background-color: rgba(167, 139, 250, 1);
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.social-message {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.line {
+  height: 1px;
+  flex: 1;
+  background-color: rgba(55, 65, 81, 1);
+}
+
+.message {
+  padding: 0 0.5rem;
+  font-size: 0.9rem;
+  color: rgba(156, 163, 175, 1);
+}
+
+.poli {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.poli a {
+  color: white;
+  text-decoration: none;
+}
+
+.poli a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 992px) {
+  .nav-desktop {
+    display: none;
+  }
+  .hamburguer {
+    display: flex;
+  }
+  .pesquisa {
+    width: 160px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 15px;
+  }
+
+  .pesquisa {
+    width: 130px;
+  }
+
+  .login {
+    width: 26px;
+    height: 26px;
+  }
+
+  .form-container {
+    max-width: 90%;
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .sign {
+    font-size: 0.95rem;
+  }
+}

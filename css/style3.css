@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background: linear-gradient(rgb(48, 66, 160), rgb(252, 253, 204), rgb(48, 66, 160));
+  color: gold;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.navegação {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  background-color: deepskyblue;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.nav-desktop a {
+  color: #000;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 16px;
+}
+
+.nav-desktop a:hover {
+  color: #52ff86;
+}
+
+.pesquisa {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  width: 200px;
+}
+
+.pesquisa input {
+  flex: 1;
+  border: none;
+  padding: 6px;
+  border-radius: 16px 0 0 16px;
+}
+
+.pesquisa button {
+  background-color: #fe7171;
+  border: none;
+  border-radius: 0 16px 16px 0;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.pesquisa button:hover {
+  background-color: #ff007b;
+}
+
+.login {
+  background-color: #fe8686;
+  border: 1px solid #ffff7a;
+  border-radius: 8px;
+  width: 30px;
+  height: 30px;
+  margin-left: 4px;
+  cursor: pointer;
+}
+
+.login:hover {
+  background-color: #ff007b;
+  border: 1px solid #ff0000;
+}
+
+.botoes {
+  display: flex;
+  align-items: center;
+}
+
+.menu-escondido {
+  display: none;
+}
+
+.hamburguer {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.linha {
+  height: 4px;
+  width: 100%;
+  background-color: red;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu {
+  display: none;
+  list-style: none;
+  background-color: deepskyblue;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 100;
+}
+
+.menu li a {
+  display: block;
+  padding: 16px;
+  color: #7affb4;
+  text-decoration: none;
+}
+
+.menu li a:hover {
+  background-color: #0099cc;
+  color: white;
+}
+
+.menu-escondido:checked ~ .menu {
+  display: block;
+}
+
+.menu-escondido:checked ~ .hamburguer .linha1 {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.menu-escondido:checked ~ .hamburguer .linha2 {
+  opacity: 0;
+}
+
+.menu-escondido:checked ~ .hamburguer .linha3 {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.privacidade {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  border: 2px solid orange;
+  border-radius: 10px;
+  margin: 30px auto;
+  padding: 30px;
+  width: 90%;
+  max-width: 900px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.privacidade img {
+  width: 200px;
+  max-width: 80%;
+  height: auto;
+  margin: 20px auto;
+  display: block;
+}
+
+.privacidade img:hover{
+  width: 250px;
+  transition: all 0.3s ease-in-out
+}
+
+.privacidade h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.privacidade h2 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.privacidade p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: justify;
+  color: #222;
+}
+
+.privacidade p:hover {
+  color: #000;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 992px) {
+  .nav-desktop {
+    display: none;
+  }
+
+  .hamburguer {
+    display: flex;
+  }
+
+  .pesquisa {
+    width: 160px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 15px;
+  }
+
+  .pesquisa {
+    width: 130px;
+  }
+
+  .login {
+    width: 26px;
+    height: 26px;
+  }
+
+  .privacidade {
+    font-size: 18px;
+    padding: 15px;
+  }
+
+  .privacidade img {
+    width: 150px;
+  }
+
+  .privacidade h1 {
+    font-size: 1.6rem;
+  }
+
+  .privacidade h2 {
+    font-size: 1.2rem;
+  }
+
+  .privacidade p {
+    font-size: 1rem;
+  }
+}
